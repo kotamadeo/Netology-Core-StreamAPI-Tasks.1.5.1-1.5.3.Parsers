@@ -1,0 +1,20 @@
+<staff>
+    <employee>
+        <id>1</id>
+        <name>John</name>
+        <surname>Smith</surname>
+        <country>USA</country>
+		<sex>m</sex>
+        <age>25</age>
+		<salary>5200</salary>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>Anna</name>
+        <surname>Petrova</surname>
+        <country>RU</country>
+		<sex>f</sex>
+        <age>23</age>
+		<salary>5000</salary>
+    </employee>
+</staff>

@@ -1,18 +1,17 @@
-package com.gmail.at.kotamadeo.parsers;
+package com.gmail.at.kotamadeo.parsers.interfaces;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.SneakyThrows;
 
 import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 
-public interface AbstractParser {
+public interface ToJsonParser {
 
-    @SneakyThrows
-     default void writeJSON(Path path, List<Map<?, ?>> data) {
+    default void writeJSON(Path path, List<Map<?, ?>> data) throws IOException {
         if (Files.notExists(path)) {
             Files.createFile(path);
         }
@@ -23,6 +22,5 @@ public interface AbstractParser {
         }
     }
 
-
-    List<Map<?, ?>> parseToJSON(Path path);
+    List<Map<?, ?>> parseToJSON(Path path) throws IOException;
 }
